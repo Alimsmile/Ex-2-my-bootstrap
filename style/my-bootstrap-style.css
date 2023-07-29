@@ -1,0 +1,92 @@
+:root {
+   --gutterr: 15px;
+}
+
+.col-3 {
+   /* Вычитаем отступы между элементами 15px, чтобы влезло 4 контейнера */
+   width: calc(25% - var(--gutter));
+}
+
+.col-4 {
+   /* 
+      1200px - 12 столбцов
+      хотим 3 контейнера по 4 столбцов
+      должны заниматься в процентах: 100 / 3
+   */
+   width: calc(33.33% - var(--gutter));
+}
+
+.col-6 {
+   width: calc(50% - var(--gutter));
+}
+
+.col-12 {
+   width: calc(100% - var(--gutter));
+}
+
+/* 
+   Стили применяются для экранов = и меньше 992px 
+   А все выше стили для экранов больше
+*/
+@media (max-width: 992px) {
+   .container {
+      padding: 0 10px;
+   }
+
+   /* lg - large 992px */
+   .col-lg-3 {
+      width: calc(25% - var(--gutterr));
+   }
+   
+   .col-lg-4 {
+      width: calc(33.33% - var(--gutterr));
+   }
+   
+   .col-lg-6 {
+      width: calc(50% - var(--gutterr));
+   }
+   
+   .col-lg-12 {
+      width: calc(100% - var(--gutterr));
+   }
+}
+
+@media (max-width: 768px) {
+   .container {
+      padding: 0 5px;
+   }
+
+   .col-md-3 {
+      width: calc(25% - var(--gutterr));
+   }
+   
+   .col-md-4 {
+      width: calc(33.33% - var(--gutterr));
+   }
+   
+   .col-md-6 {
+      width: calc(50% - var(--gutterr));
+   }
+   
+   .col-md-12 {
+      width: calc(100% - var(--gutterr));
+   }
+}
+
+@media (max-width: 576px) {
+   .col-sm-3 {
+      width: calc(25% - var(--gutterr));
+   }
+   
+   .col-sm-4 {
+      width: calc(33.33% - var(--gutterr));
+   }
+   
+   .col-sm-6 {
+      width: calc(50% - var(--gutterr));
+   }
+   
+   .col-sm-12 {
+      width: calc(100% - var(--gutterr));
+   }
+}

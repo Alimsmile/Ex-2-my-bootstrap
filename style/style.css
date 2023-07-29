@@ -1,0 +1,58 @@
+/* 
+   Сетка bootstrap c media для адаптивности под разные размеры экранов
+
+   без префикса (просто col-12) - 1200px
+   lm - 992px
+   md - 768px
+   sm - 576px
+
+   col-12 100%
+   col-6  50%
+   col-4  33.33%
+   col-3  25% 
+*/
+@import url("my-bootstrap-style.css");
+
+
+
+:root {
+   --gutter: 15px;
+}
+
+*, *:before, *:after {
+   /* Зачем таким образом делать? */
+   box-sizing: inherit; /* Наследуем от html */
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 18px;
+}
+
+.header {
+   background-color: teal;
+}
+
+.container {
+   background-color: #eee;
+   max-width: 1200px;
+   margin: auto;
+   padding: 0 15px;
+}
+
+/* В row находятся контейнеры (карточки) */
+.row {
+   display: flex;
+   flex-wrap: wrap; /* Чтобы переходили на след строчку */
+}
+
+/* Свойства для всех контейнеров */
+.row > div {
+   padding: 15px;
+   /* Даже не нужен justify-content */
+   margin: auto;
+   background-color: wheat;
+   border: 1px black solid;
+}
